@@ -4,4 +4,4 @@ export function getCategory() {
         url:'home/category/head'
     })
     
-}
+}//測試OK

@@ -2,7 +2,8 @@
 import axios from "axios";
 const httpInstance = axios.create({
     baseURL:'https://e-shop-practice.Kei.com',
-    // baseURL:'https://pcapi-xiaotuxian-front-devtest.itheima.net',測試OK
+    // baseURL:'https://pcapi-xiaotuxian-front-devtest.itheima.net',
+    // 測試OK
     timeout:5000
 })
 // 添加请求拦截器
