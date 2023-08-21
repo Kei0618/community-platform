@@ -1,0 +1,11 @@
+// 添加路徑聯想設定 此為提示 轉換在原文件的vite.config文件內
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+          "@/*":[
+            "src/*"
+          ] 
+        }
+    }
+}
