@@ -3,9 +3,9 @@
 </script>
 
 <template>
-<!--一級路由 -->
-
+  <!--一級路由 -->
   <RouterView />
+
 </template>
 
 <style scoped>
