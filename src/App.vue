@@ -1,9 +1,10 @@
 <script setup>
-
+// import LayoutHeader from '@/views/Layout/component/LayoutHeader.vue';
 </script>
 
 <template>
   <!--一級路由 -->
+
   <RouterView />
 
 </template>

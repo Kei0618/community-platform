@@ -15,7 +15,7 @@ const router = createRouter({
       children:[
         {
           // 默認的話給予空就可以
-          path:'',
+          path:'Home',
           component:Home
         },
         {
