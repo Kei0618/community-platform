@@ -2,9 +2,9 @@
 
 </script>
 <template>
-  <div class="container-md">
+  <div class="container-md mt-3">
     <div class="controls d-flex">
-      <div class="col-2">
+      <div class="col-2 mx-2">
         <select class="form-select" v-model="sortBy">
           <option value="publishDate">發文日期</option>
           <option value="modifyDate">修改日期</option>
@@ -13,23 +13,23 @@
       <div class="col-3">
         <input class="form-control" v-model="searchQuery" placeholder="輸入關鍵字查詢" />
       </div>
-      <RouterView />
+      <div class="col-6 d-flex justify-content-end">
+        <router-link to="/edit"  class="btn btn-secondary">發文</router-link>
+      </div>
     </div>
     <table class="table text-center align-middle">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-          <th scope="col">Actions</th> <!-- 新增 Actions 欄位 -->
+          <th scope="col">發文日期</th>
+          <th scope="col">標題</th>
+          <th scope="col">發文者</th>
+          <th scope="col"></th> <!-- 新增 Actions 欄位 -->
         </tr>
       </thead>
       <tbody >
         <tr v-for="(item, index) in tableData" :key="index">
           <th scope="row">{{ index + 1 }}</th>
           <td>{{ item.firstName }}</td>
-          <td>{{ item.lastName }}</td>
           <td>{{ item.handle }}</td>
           <td>
             <button class="btn btn-primary" @click="editItem(index)">編輯</button>

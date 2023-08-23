@@ -5,7 +5,7 @@ import LayoutHeader from '@/views/Layout/component/LayoutHeader.vue';
     
     <div class="login-page">
       <div class="login-form">
-      <h1>登录</h1>
+      <h1>登入</h1>
       <form @submit.prevent="login">
         <div class="form-group">
           <label for="username">用戶名</label>
@@ -15,8 +15,15 @@ import LayoutHeader from '@/views/Layout/component/LayoutHeader.vue';
           <label for="password">密碼</label>
           <input v-model="password" type="password" id="password" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">登入</button>
+        <div>
+          <button type="submit" class="btn btn-primary ">登入</button>
+          <router-link to="/" class="btn btn-primary mx-2" aria-current="page">返回首頁</router-link>
+        </div>
       </form>
+      <div class="application">
+        還未有帳號嗎?
+        <router-link to="/application">註冊帳號</router-link>
+      </div>
       <p v-if="error" class="error-message">{{ error }}</p>
       </div>
     </div>
@@ -44,7 +51,7 @@ import LayoutHeader from '@/views/Layout/component/LayoutHeader.vue';
   .login-form {
     max-width: 500px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 60px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -52,7 +59,7 @@ import LayoutHeader from '@/views/Layout/component/LayoutHeader.vue';
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
   .form-control {
@@ -62,7 +69,7 @@ import LayoutHeader from '@/views/Layout/component/LayoutHeader.vue';
     border-radius: 4px;
   }
   
-  .btn {
+  .btn.btn-primary :hover {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -70,11 +77,19 @@ import LayoutHeader from '@/views/Layout/component/LayoutHeader.vue';
     border-radius: 4px;
     cursor: pointer;
   }
+  .btn.btn-primary :hover{
+    background-color: #e3e611 ;
+    color: #ac0f8f
+  }
   
   .error-message {
     color: red;
   }
   
+  .application{
+    margin-top: 5%;
+  }
+
   /* 響應視窗*/
   @media (min-width: 724px) {
     .login-page{
